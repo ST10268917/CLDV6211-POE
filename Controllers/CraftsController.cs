@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Part2.Models;
 
 namespace Part2.Controllers
 {
+    [Authorize]
     public class CraftsController : Controller
     {
 
