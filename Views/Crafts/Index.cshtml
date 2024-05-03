@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Part2.Models.Craft>
+
+ <! –– Set the title of the Page -->
+@{
+    ViewData["Title"] = "My Work";
+}
+
+ <! –– Heading of the page and horizontal rule for style -->
+<h1 style="text-align: center; color: #F57D1F; font-size: 72px; font-family: Verdana"><strong>My Work</h1></strong>
+<hr style="width:93%;text-align:left;margin-left:0">
+
+ <! –– Displaying the crafts as a series of bootstrap cards layed out in rows and columns. -->
+<body style="background-color: #F5E8DD;">
+    <div class="container mt-3" style="padding-top: 30px;">
+        <div class="row">
+            @foreach (var craft in Model)
+            {
+                <div class="col-sm-4" style="padding-bottom: 30px;">
+                    <div class="card" style="height: 550px; width: 300px;">
+                        <img src="@craft.imgUrl" class="card-img-top" alt="@craft.CraftName" style="height: 200px; width:300px;">
+                        <div class="card-body">
+                            <h5 class="card-title">@craft.CraftName</h5>
+                            <p class="card-text">@craft.CraftDescription</p>
+                            <p class="text-muted">Price: R @craft.Price</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+
+<! -- CODE ATTRIBUTION -->
+<! -- Bootstrap (n.d.) Cards [Source Code]. https://getbootstrap.com/docs/4.0/components/card/
+
+
+
