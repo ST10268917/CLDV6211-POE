@@ -9,11 +9,11 @@ namespace Part2.Models
     {
         public int Id { get; set; }
         [Display(Name = "Craft Name")]
-        public string? CraftName { get; set; }
+        public string CraftName { get; set; }
         [Display(Name = "Image")]
         public string? imgUrl { get; set; }
         [Display(Name = "Craft Description")]
-        public string? CraftDescription { get; set; }
+        public string CraftDescription { get; set; }
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
     }

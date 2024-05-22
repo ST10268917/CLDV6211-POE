@@ -1,15 +1,25 @@
-﻿@model IEnumerable<Part2.Models.Craft>
+﻿@using Microsoft.AspNetCore.Identity;
+@using Part2.Areas.Identity.Data;
 
- <! –– Set the title of the Page -->
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@model IEnumerable<Part2.Models.Craft>
+
 @{
     ViewData["Title"] = "My Work";
 }
 
- <! –– Heading of the page and horizontal rule for style -->
 <h1 style="text-align: center; color: #F57D1F; font-size: 72px; font-family: Verdana"><strong>My Work</h1></strong>
-<hr style="width:93%;text-align:left;margin-left:0">
+<hr style="width:93%; text-align:left; margin-left:0">
 
- <! –– Displaying the crafts as a series of bootstrap cards layed out in rows and columns. -->
+@if (User.IsInRole("KhumaloCraft User"))
+{
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Add Craft</a>
+    </p>
+}
+
 <body style="background-color: #F5E8DD;">
     <div class="container mt-3" style="padding-top: 30px;">
         <div class="row">
@@ -22,6 +32,14 @@
                             <h5 class="card-title">@craft.CraftName</h5>
                             <p class="card-text">@craft.CraftDescription</p>
                             <p class="text-muted">Price: R @craft.Price</p>
+                            @if (User.IsInRole("KhumaloCraft User"))
+                            {
+                                <a asp-action="Edit" asp-route-id="@craft.Id" class="btn btn-secondary">Edit</a>
+                            }
+                            @if (!User.IsInRole("KhumaloCraft User"))
+                            {
+                                <a asp-action="ConfirmOrder" asp-route-id="@craft.Id" class="btn btn-dark">Order Now</a>
+                            }
                         </div>
                     </div>
                 </div>
@@ -29,9 +47,3 @@
         </div>
     </div>
 </body>
-
-<! -- CODE ATTRIBUTION -->
-<! -- Bootstrap (n.d.) Cards [Source Code]. https://getbootstrap.com/docs/4.0/components/card/
-
-
-

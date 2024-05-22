@@ -1,4 +1,11 @@
-﻿﻿ <! –– Elements and styles outlined here are applied to all pages consistently. Eg; The header and footer -->
+﻿﻿@using Microsoft.AspNetCore.Identity;
+@using Part2.Areas.Identity.Data;
+
+<! –– Elements and styles outlined here are applied to all pages consistently. Eg; The header and footer -->
+
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +39,12 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="ContactUs" style="color: #EEEEEE">Contact Us</a>
                         </li>
+                        @if (User.IsInRole("KhumaloCraft User"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Orders" asp-action="Index" style="color: #EEEEEE">Orders</a>
+                            </li>
+                        }
 
                     </ul>
                 </div>

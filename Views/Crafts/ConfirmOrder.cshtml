@@ -1,0 +1,16 @@
+﻿@model Part2.Models.Craft
+
+<h2>Confirm Order</h2>
+<hr />
+<div class="text-center">
+    <h3>@Model.CraftName</h3>
+    <img src="@Model.imgUrl" alt="@Model.CraftName" style="width:200px; height:auto;" />
+    <p>@Model.CraftDescription</p>
+    <p><strong>Price:</strong> R @Model.Price</p>
+
+    <form asp-action="PlaceOrder" asp-route-id="@Model.Id">
+        <button type="submit" class="btn btn-success">Confirm Order</button>
+    </form>
+</div>
+
+<a asp-action="Index">Cancel</a>

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Part2.Areas.Identity.Data;
+using Part2.Models;
 
 namespace Part2.Data;
 
@@ -11,6 +12,8 @@ public class Part2Context : IdentityDbContext<ApplicationUser>
         : base(options)
     {
     }
+    public DbSet<Craft> Crafts { get; set; }
+    public DbSet<Order> Orders { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
