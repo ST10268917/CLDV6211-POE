@@ -45,7 +45,12 @@
                                 <a class="nav-link" asp-area="" asp-controller="Orders" asp-action="Index" style="color: #EEEEEE">Orders</a>
                             </li>
                         }
-
+                        @if (!User.IsInRole("KhumaloCraft User"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Orders" asp-action="OrderHistory" style="color: #EEEEEE">Order History</a>
+                            </li>
+                        }
                     </ul>
                 </div>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">

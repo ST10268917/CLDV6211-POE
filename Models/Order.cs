@@ -11,6 +11,8 @@ namespace Part2.Models
         public string? ClientId { get; set; }
         public DateTime OrderDate { get; set; }
 
+        public bool IsNotProcessed { get; set; } = true;
+
         //navigation properties
         public Craft? Craft { get; set; }
         public ApplicationUser? User { get; set; }

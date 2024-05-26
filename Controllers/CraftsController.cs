@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using Part2.Areas.Identity.Data;
 using Part2.Data;
 using Part2.Models;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Part2.Controllers
 {
@@ -20,13 +23,11 @@ namespace Part2.Controllers
             _userManager = userManager;
         }
 
-
         // GET: Crafts
         public async Task<IActionResult> Index()
         {
-            // Fetch the list of crafts asynchronously from the database
-            var crafts = await _context.Crafts.ToListAsync();
-            return View(crafts);  // Pass the list of crafts to the view
+            var availableCrafts = await _context.Crafts.Where(c => c.IsAvailable).ToListAsync();
+            return View(availableCrafts);
         }
 
         // GET: Crafts/Create
@@ -36,8 +37,6 @@ namespace Part2.Controllers
         }
 
         // POST: Crafts/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,CraftName,imgUrl,CraftDescription,Price")] Craft craft, IFormFile imageFile)
@@ -46,15 +45,7 @@ namespace Part2.Controllers
             {
                 if (imageFile != null && imageFile.Length > 0)
                 {
-                    var fileName = Path.GetFileName(imageFile.FileName);
-                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
-
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await imageFile.CopyToAsync(stream);
-                    }
-
-                    craft.imgUrl = "/images/" + fileName; // Save relative path as URL
+                    craft.imgUrl = await SaveImage(imageFile);
                 }
 
                 _context.Add(craft);
@@ -81,7 +72,6 @@ namespace Part2.Controllers
         }
 
         // POST: Crafts/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,CraftName,CraftDescription,Price,imgUrl")] Craft craft, IFormFile imageFile)
@@ -95,7 +85,6 @@ namespace Part2.Controllers
             {
                 try
                 {
-                    // Retrieve the existing craft to get the current imgUrl
                     var existingCraft = await _context.Crafts.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
                     if (existingCraft == null)
                     {
@@ -105,21 +94,7 @@ namespace Part2.Controllers
                     // Check if a new image file was uploaded
                     if (imageFile != null && imageFile.Length > 0)
                     {
-                        var fileName = Path.GetFileName(imageFile.FileName);
-                        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
-
-                        // Ensure the directory exists
-                        if (!Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images")))
-                        {
-                            Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images"));
-                        }
-
-                        // Save the uploaded file to the server
-                        using (var stream = new FileStream(filePath, FileMode.Create))
-                        {
-                            await imageFile.CopyToAsync(stream);
-                        }
-                        craft.imgUrl = "/images/" + fileName;
+                        craft.imgUrl = await SaveImage(imageFile);
                     }
                     else
                     {
@@ -127,8 +102,10 @@ namespace Part2.Controllers
                         craft.imgUrl = existingCraft.imgUrl;
                     }
 
-                    _context.Update(craft);
+                    // Update the craft entity
+                    _context.Entry(craft).State = EntityState.Modified;
                     await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -141,27 +118,70 @@ namespace Part2.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
-            }
-            else
-            {
-                // If ModelState is invalid, retrieve the current image URL and return the view
-                var existingCraft = await _context.Crafts.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
-                craft.imgUrl = existingCraft?.imgUrl;
             }
             return View(craft);
+        }
+
+        // GET: Crafts/EditImage/5
+        public async Task<IActionResult> EditImage(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var craft = await _context.Crafts.FindAsync(id);
+            if (craft == null)
+            {
+                return NotFound();
+            }
+            return View(craft);
+        }
+
+        // POST: Crafts/EditImage/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditImage(int id, IFormFile imageFile)
+        {
+            var craft = await _context.Crafts.FindAsync(id);
+            if (craft == null)
+            {
+                return NotFound();
+            }
+
+            if (imageFile != null && imageFile.Length > 0)
+            {
+                craft.imgUrl = await SaveImage(imageFile);
+                _context.Update(craft);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(craft);
+        }
+
+        private async Task<string> SaveImage(IFormFile imageFile)
+        {
+            var fileName = Path.GetFileName(imageFile.FileName);
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+
+            if (!Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images")))
+            {
+                Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images"));
+            }
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await imageFile.CopyToAsync(stream);
+            }
+
+            return "/images/" + fileName;
         }
 
         private bool CraftExists(int id)
         {
             return _context.Crafts.Any(e => e.Id == id);
         }
-
-
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-
-
-
 
         public async Task<IActionResult> ConfirmOrder(int id)
         {
@@ -182,17 +202,29 @@ namespace Part2.Controllers
                 return NotFound();
             }
 
-            // Retrieve the current user's ID using UserManager
             var userId = _userManager.GetUserId(User);
-
             Order order = new Order
             {
                 CraftId = craft.Id,
-                ClientId = userId  // Use the retrieved user ID
+                ClientId = userId
             };
 
             _context.Orders.Add(order);
-            //_context.Crafts.Remove(craft);
+            await _context.SaveChangesAsync();
+
+            OrderHistory orderHistory = new OrderHistory
+            {
+                OrderId = order.OrderId,
+                ClientId = userId,
+                OrderDate = DateTime.Now,
+                Order = order,
+                User = await _userManager.FindByIdAsync(userId)
+            };
+
+            _context.OrderHistories.Add(orderHistory);
+            craft.IsAvailable = false;
+            _context.Crafts.Update(craft);
+
             await _context.SaveChangesAsync();
 
             return RedirectToAction("OrderSuccess");
@@ -202,13 +234,5 @@ namespace Part2.Controllers
         {
             return View();
         }
-
-
     }
 }
-
-
-// CODE ATTRIBUTION
-//Anderson, R (2024) Get started with ASP.NET Core MVC [SourceCode]. https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-8.0&tabs=visual-studio
-
-

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Part2.Areas.Identity.Data;
 using Part2.Data;
 using Part2.Models;
 
@@ -13,17 +15,21 @@ namespace Part2.Controllers
     public class OrdersController : Controller
     {
         private readonly Part2Context _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public OrdersController(Part2Context context)
+        public OrdersController(Part2Context context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
+
+
 
         // GET: Orders
         public async Task<IActionResult> Index()
         {
-            var part2Context = _context.Orders.Include(o => o.Craft);
-            return View(await part2Context.ToListAsync());
+            var unprocessedOrders = await _context.Orders.Where(c => c.IsNotProcessed).ToListAsync();
+            return View(unprocessedOrders);
         }
 
         // GET: Orders/Details/5
@@ -137,5 +143,48 @@ namespace Part2.Controllers
             }
             return View(craft);
         }
+
+        public async Task<IActionResult> OrderProcessed(int id)
+        {
+            var order = await _context.Orders.FindAsync(id);
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+
+            ProcessedOrder processedOrder = new ProcessedOrder
+            {
+                CraftId = order.CraftId,
+                ClientId = order.ClientId,
+                OrderDate = order.OrderDate,
+            
+            };
+
+            _context.ProcessedOrders.Add(processedOrder);
+            order.IsNotProcessed = false;
+            _context.Orders.Update(order);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("ProcessSuccess");
+        }
+
+        public IActionResult ProcessSuccess()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> OrderHistory()
+        {
+            var userId = _userManager.GetUserId(User);
+            var orderHistories = await _context.OrderHistories
+                .Include(oh => oh.Order)
+                .Include(oh => oh.Order.Craft)
+                .Where(oh => oh.ClientId == userId)
+                .ToListAsync();
+
+            return View(orderHistories);
+        }
+
     }
 }

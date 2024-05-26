@@ -31,7 +31,9 @@
                         <div class="card-body">
                             <h5 class="card-title">@craft.CraftName</h5>
                             <p class="card-text">@craft.CraftDescription</p>
+                            <p style="color: forestgreen">Available</p>
                             <p class="text-muted">Price: R @craft.Price</p>
+
                             @if (User.IsInRole("KhumaloCraft User"))
                             {
                                 <a asp-action="Edit" asp-route-id="@craft.Id" class="btn btn-secondary">Edit</a>

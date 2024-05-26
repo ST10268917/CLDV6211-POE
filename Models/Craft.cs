@@ -16,5 +16,6 @@ namespace Part2.Models
         public string CraftDescription { get; set; }
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
+        public bool IsAvailable { get; set; } = true;
     }
 }

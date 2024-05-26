@@ -3,9 +3,8 @@
 <h2>Process Order</h2>
 <hr />
 <div class="text-center">
-    <h3>@Model.OrderId</h3>
     
-    <form asp-action="" asp-route-id="@Model.OrderId">
+    <form asp-action="OrderProcessed" asp-route-id="@Model.OrderId">
         <button type="submit" class="btn btn-success">Process Order</button>
     </form>
 </div>

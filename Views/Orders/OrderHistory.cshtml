@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Part2.Models.OrderHistory>
+
+@{
+    ViewData["Title"] = "Order History";
+}
+
+<h1>Order History</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Order Date</th>
+            <th>Craft Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var orderHistory in Model)
+        {
+            <tr>
+                <td>@orderHistory.OrderDate.ToString("g")</td>
+                <td>@orderHistory.Order?.Craft?.CraftName</td>
+                <td>@orderHistory.Order?.Craft?.Price</td>
+            </tr>
+        }
+    </tbody>
+</table>

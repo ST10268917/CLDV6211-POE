@@ -14,6 +14,8 @@ public class Part2Context : IdentityDbContext<ApplicationUser>
     }
     public DbSet<Craft> Crafts { get; set; }
     public DbSet<Order> Orders { get; set; }
+    public DbSet<ProcessedOrder> ProcessedOrders { get; set; }
+    public DbSet<OrderHistory> OrderHistories { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -22,4 +24,6 @@ public class Part2Context : IdentityDbContext<ApplicationUser>
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
     }
+
+public DbSet<Part2.Models.OrderHistory> OrderHistory { get; set; } = default!;
 }
