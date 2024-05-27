@@ -24,11 +24,36 @@ namespace Part2.Controllers
         }
 
         // GET: Crafts
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string title, string selectedCategory)
         {
-            var availableCrafts = await _context.Crafts.Where(c => c.IsAvailable).ToListAsync();
-            return View(availableCrafts);
+            var crafts = _context.Crafts.Where(c => c.IsAvailable);
+
+            if (!string.IsNullOrEmpty(title))
+            {
+                crafts = crafts.Where(c => c.CraftName.Contains(title));
+            }
+
+            if (!string.IsNullOrEmpty(selectedCategory))
+            {
+                crafts = crafts.Where(c => c.Category == selectedCategory);
+            }
+
+            var categories = await _context.Crafts.Where(c => c.IsAvailable)
+                                                  .Select(c => c.Category)
+                                                  .Distinct()
+                                                  .ToListAsync();
+
+            var model = new CraftIndexViewModel
+            {
+                Crafts = await crafts.ToListAsync(),
+                Categories = categories,
+                SelectedCategory = selectedCategory,
+                CurrentFilter = title
+            };
+
+            return View(model);
         }
+
 
         // GET: Crafts/Create
         public IActionResult Create()
@@ -39,7 +64,7 @@ namespace Part2.Controllers
         // POST: Crafts/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CraftName,imgUrl,CraftDescription,Price")] Craft craft, IFormFile imageFile)
+        public async Task<IActionResult> Create([Bind("Id,CraftName,Category,imgUrl,CraftDescription,Price")] Craft craft, IFormFile imageFile)
         {
             if (ModelState.IsValid)
             {
@@ -74,7 +99,7 @@ namespace Part2.Controllers
         // POST: Crafts/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,CraftName,CraftDescription,Price,imgUrl")] Craft craft, IFormFile imageFile)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CraftName,Category,CraftDescription,Price,imgUrl")] Craft craft, IFormFile? imageFile)
         {
             if (id != craft.Id)
             {
@@ -85,25 +110,26 @@ namespace Part2.Controllers
             {
                 try
                 {
-                    var existingCraft = await _context.Crafts.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
+                    var existingCraft = await _context.Crafts.FirstOrDefaultAsync(c => c.Id == id);
                     if (existingCraft == null)
                     {
                         return NotFound();
                     }
 
+                    // Update the existing craft's properties
+                    existingCraft.CraftName = craft.CraftName;
+                    existingCraft.CraftDescription = craft.CraftDescription;
+                    existingCraft.Price = craft.Price;
+
                     // Check if a new image file was uploaded
                     if (imageFile != null && imageFile.Length > 0)
                     {
-                        craft.imgUrl = await SaveImage(imageFile);
+                        existingCraft.imgUrl = await SaveImage(imageFile);
                     }
-                    else
-                    {
-                        // Retain the existing image URL if no new image was uploaded
-                        craft.imgUrl = existingCraft.imgUrl;
-                    }
+                    // Otherwise, retain the existing image URL (already set on existingCraft)
 
                     // Update the craft entity
-                    _context.Entry(craft).State = EntityState.Modified;
+                    _context.Update(existingCraft);
                     await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
@@ -121,7 +147,6 @@ namespace Part2.Controllers
             }
             return View(craft);
         }
-
         // GET: Crafts/EditImage/5
         public async Task<IActionResult> EditImage(int? id)
         {

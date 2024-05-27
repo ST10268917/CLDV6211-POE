@@ -1,35 +1,53 @@
 ﻿@using Microsoft.AspNetCore.Identity;
 @using Part2.Areas.Identity.Data;
+@using Part2.Models;
 
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
-@model IEnumerable<Part2.Models.Craft>
+@model CraftIndexViewModel
 
 @{
     ViewData["Title"] = "My Work";
 }
 
-<h1 style="text-align: center; color: #F57D1F; font-size: 72px; font-family: Verdana"><strong>My Work</h1></strong>
+<h1 style="text-align: center; color: #F57D1F; font-size: 72px; font-family: Verdana"><strong>My Work</strong></h1>
 <hr style="width:93%; text-align:left; margin-left:0">
 
 @if (User.IsInRole("KhumaloCraft User"))
 {
     <p>
-        <a asp-action="Create" class="btn btn-primary">Add Craft</a>
+        <a asp-action="Create" class="btn btn-dark">Add Craft</a>
     </p>
 }
 
 <body style="background-color: #F5E8DD;">
     <div class="container mt-3" style="padding-top: 30px;">
-        <div class="row">
-            @foreach (var craft in Model)
+        <form method="get" asp-action="Index">
+            <div class="form-group row">
+                <div class="col-md-3 mb-3">
+                    <select class="form-control" asp-for="SelectedCategory" asp-items="@(new SelectList(Model.Categories))">
+                        <option value="">All</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <input type="text" class="form-control" name="Title" placeholder="Search by Name" value="@Model.CurrentFilter" />
+                </div>
+                <div class="col-md-3 mb-3">
+                    <button type="submit" class="btn btn-dark">Filter</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="row mt-5">
+            @foreach (var craft in Model.Crafts)
             {
-                <div class="col-sm-4" style="padding-bottom: 30px;">
+                <div class="col-sm-4 mb-4">
                     <div class="card" style="height: 550px; width: 300px;">
                         <img src="@craft.imgUrl" class="card-img-top" alt="@craft.CraftName" style="height: 200px; width:300px;">
                         <div class="card-body">
                             <h5 class="card-title">@craft.CraftName</h5>
+                            <h6 class="card-title">Category: @craft.Category</h6>
                             <p class="card-text">@craft.CraftDescription</p>
                             <p style="color: forestgreen">Available</p>
                             <p class="text-muted">Price: R @craft.Price</p>
