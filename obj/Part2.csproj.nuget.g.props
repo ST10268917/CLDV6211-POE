@@ -23,5 +23,6 @@
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\Hamza\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.4</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgMicrosoft_CodeAnalysis_AnalyzerUtilities Condition=" '$(PkgMicrosoft_CodeAnalysis_AnalyzerUtilities)' == '' ">C:\Users\Hamza\.nuget\packages\microsoft.codeanalysis.analyzerutilities\3.3.0</PkgMicrosoft_CodeAnalysis_AnalyzerUtilities>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\Hamza\.nuget\packages\microsoft.entityframeworkcore.tools\8.0.4</PkgMicrosoft_EntityFrameworkCore_Tools>
+    <PkgMicrosoft_Azure_WebJobs_Extensions_DurableTask_Analyzers Condition=" '$(PkgMicrosoft_Azure_WebJobs_Extensions_DurableTask_Analyzers)' == '' ">C:\Users\Hamza\.nuget\packages\microsoft.azure.webjobs.extensions.durabletask.analyzers\0.5.0</PkgMicrosoft_Azure_WebJobs_Extensions_DurableTask_Analyzers>
   </PropertyGroup>
 </Project>

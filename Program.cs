@@ -2,6 +2,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Part2.Data;
 using Part2.Areas.Identity.Data;
+using Part2.Settings;
+using SendGrid.Extensions.DependencyInjection;
+using Part2.Services;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace Part2
 {
@@ -27,6 +31,15 @@ namespace Part2
             {
                 options.Password.RequireUppercase = false;
             });
+
+            builder.Services.Configure<SendGridSettings>(builder.Configuration.GetSection("SendGridSettings"));
+
+            builder.Services.AddSendGrid(options =>
+            {
+                options.ApiKey = builder.Configuration.GetSection("SendGridSettings").GetValue<string>("ApiKey");
+            });
+
+            builder.Services.AddScoped<IEmailSender, EmailSenderService>();
 
             var app = builder.Build();
 
