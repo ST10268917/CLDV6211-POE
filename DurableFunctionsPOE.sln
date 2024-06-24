@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DurableFunctionsPOE", "DurableFunctionsPOE\DurableFunctionsPOE.csproj", "{02C152D0-B181-4A86-ADDA-7785F51555DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02C152D0-B181-4A86-ADDA-7785F51555DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C152D0-B181-4A86-ADDA-7785F51555DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C152D0-B181-4A86-ADDA-7785F51555DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C152D0-B181-4A86-ADDA-7785F51555DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E300433D-776F-445A-8689-23DC7E3C6463}
+	EndGlobalSection
+EndGlobal
