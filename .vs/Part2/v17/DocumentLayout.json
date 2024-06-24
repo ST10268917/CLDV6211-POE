@@ -3,22 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Hamza\\source\\repos\\Part2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6D89F2E0-4F88-4BDA-B8DB-E3C44E60C49C}|..\\OrderProcessingFunctions\\OrderProcessingFunctions.csproj|c:\\users\\hamza\\source\\repos\\orderprocessingfunctions\\orderorchestrator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|C:\\Users\\Hamza\\source\\repos\\Part2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D89F2E0-4F88-4BDA-B8DB-E3C44E60C49C}|..\\OrderProcessingFunctions\\OrderProcessingFunctions.csproj|c:\\users\\hamza\\source\\repos\\orderprocessingfunctions\\orderprocessingfunctions.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|c:\\users\\hamza\\source\\repos\\part2\\part2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|solutionrelative:part2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|c:\\users\\hamza\\source\\repos\\part2\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|C:\\Users\\Hamza\\source\\repos\\Part2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|C:\\Users\\Hamza\\source\\repos\\Part2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|C:\\Users\\Hamza\\source\\repos\\Part2\\models\\craftindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|solutionrelative:models\\craftindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|C:\\Users\\Hamza\\source\\repos\\Part2\\part2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|solutionrelative:part2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|C:\\Users\\Hamza\\source\\repos\\Part2\\views\\crafts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -39,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|C:\\Users\\Hamza\\source\\repos\\Part2\\controllers\\processedorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|solutionrelative:controllers\\processedorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|C:\\Users\\Hamza\\source\\repos\\Part2\\models\\craftindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|solutionrelative:models\\craftindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E670838-058F-4C91-BF22-F40D5501A705}|Part2.csproj|C:\\Users\\Hamza\\source\\repos\\Part2\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -252,7 +250,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 49,
           "Children": [
             {
               "$type": "Bookmark",
@@ -260,32 +258,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrderOrchestrator.cs",
-              "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\OrderProcessingFunctions\\OrderOrchestrator.cs",
-              "RelativeDocumentMoniker": "..\\OrderProcessingFunctions\\OrderOrchestrator.cs",
-              "ToolTip": "C:\\Users\\Hamza\\source\\repos\\OrderProcessingFunctions\\OrderOrchestrator.cs*",
-              "RelativeToolTip": "..\\OrderProcessingFunctions\\OrderOrchestrator.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-23T13:24:10.5Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OrderProcessingFunctions",
-              "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\OrderProcessingFunctions\\OrderProcessingFunctions.csproj",
-              "RelativeDocumentMoniker": "..\\OrderProcessingFunctions\\OrderProcessingFunctions.csproj",
-              "ToolTip": "C:\\Users\\Hamza\\source\\repos\\OrderProcessingFunctions\\OrderProcessingFunctions.csproj",
-              "RelativeToolTip": "..\\OrderProcessingFunctions\\OrderProcessingFunctions.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-23T13:14:39.722Z",
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Hamza\\source\\repos\\Part2\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-24T19:00:23.063Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "CraftIndexViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Models\\CraftIndexViewModel.cs",
               "RelativeDocumentMoniker": "Models\\CraftIndexViewModel.cs",
@@ -297,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "CraftCategoryViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Models\\CraftCategoryViewModel.cs",
               "RelativeDocumentMoniker": "Models\\CraftCategoryViewModel.cs",
@@ -309,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "Beadwork.jpg - Bitmap [640x392, 24 bit, JPG]",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\wwwroot\\images\\Beadwork.jpg",
               "RelativeDocumentMoniker": "wwwroot\\images\\Beadwork.jpg",
@@ -320,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 60,
               "Title": "20240527052256_Added Category attribute to Crafts table.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Migrations\\20240527052256_Added Category attribute to Crafts table.cs",
               "RelativeDocumentMoniker": "Migrations\\20240527052256_Added Category attribute to Crafts table.cs",
@@ -332,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "dbo.Orders [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Part2/True/SqlTable/dbo.Orders.sql",
               "ToolTip": "dbo.Orders [Data]",
@@ -341,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 56,
               "Title": "20240522132007_IsNotProcessed added to Order model.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Migrations\\20240522132007_IsNotProcessed added to Order model.cs",
               "RelativeDocumentMoniker": "Migrations\\20240522132007_IsNotProcessed added to Order model.cs",
@@ -353,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "20240522130916_ClientID to string in OrderHistory model.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Migrations\\20240522130916_ClientID to string in OrderHistory model.cs",
               "RelativeDocumentMoniker": "Migrations\\20240522130916_ClientID to string in OrderHistory model.cs",
@@ -365,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 57,
               "Title": "20240522124856_Added OrderHistory table.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Migrations\\20240522124856_Added OrderHistory table.cs",
               "RelativeDocumentMoniker": "Migrations\\20240522124856_Added OrderHistory table.cs",
@@ -377,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 33,
               "Title": "OrderHistoryViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\ViewModels\\OrderHistoryViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\OrderHistoryViewModel.cs",
@@ -389,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "OrderHistory.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Orders\\OrderHistory.cshtml",
               "RelativeDocumentMoniker": "Views\\Orders\\OrderHistory.cshtml",
@@ -401,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "OrderHistory.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Models\\OrderHistory.cs",
               "RelativeDocumentMoniker": "Models\\OrderHistory.cs",
@@ -413,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 32,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Orders\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Orders\\Details.cshtml",
@@ -425,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 58,
               "Title": "20240522122824_AddIsAvailableToCrafts.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Migrations\\20240522122824_AddIsAvailableToCrafts.cs",
               "RelativeDocumentMoniker": "Migrations\\20240522122824_AddIsAvailableToCrafts.cs",
@@ -437,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 35,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\ProcessedOrders\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\ProcessedOrders\\Details.cshtml",
@@ -449,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\ProcessedOrders\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\ProcessedOrders\\Index.cshtml",
@@ -461,7 +447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 59,
               "Title": "20240522115154_Added ProcessedOrder table.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Migrations\\20240522115154_Added ProcessedOrder table.cs",
               "RelativeDocumentMoniker": "Migrations\\20240522115154_Added ProcessedOrder table.cs",
@@ -473,7 +459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 36,
               "Title": "ProcessSuccess.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Orders\\ProcessSuccess.cshtml",
               "RelativeDocumentMoniker": "Views\\Orders\\ProcessSuccess.cshtml",
@@ -497,7 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "ProcessOrder.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Orders\\ProcessOrder.cshtml",
               "RelativeDocumentMoniker": "Views\\Orders\\ProcessOrder.cshtml",
@@ -509,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "ProcessedOrder.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Models\\ProcessedOrder.cs",
               "RelativeDocumentMoniker": "Models\\ProcessedOrder.cs",
@@ -521,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Orders\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Orders\\Create.cshtml",
@@ -533,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Orders\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Orders\\Index.cshtml",
@@ -545,7 +531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
@@ -557,7 +543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 43,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
@@ -569,7 +555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 41,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -581,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "OrderSuccess.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Crafts\\OrderSuccess.cshtml",
               "RelativeDocumentMoniker": "Views\\Crafts\\OrderSuccess.cshtml",
@@ -593,7 +579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 34,
               "Title": "20240515205926_Debug.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Migrations\\20240515205926_Debug.cs",
               "RelativeDocumentMoniker": "Migrations\\20240515205926_Debug.cs",
@@ -605,7 +591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "ConfirmOrder.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Crafts\\ConfirmOrder.cshtml",
               "RelativeDocumentMoniker": "Views\\Crafts\\ConfirmOrder.cshtml",
@@ -617,7 +603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 55,
               "Title": "20240515202419_Orders Table Added.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Migrations\\20240515202419_Orders Table Added.cs",
               "RelativeDocumentMoniker": "Migrations\\20240515202419_Orders Table Added.cs",
@@ -641,7 +627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Crafts\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Crafts\\Edit.cshtml",
@@ -653,7 +639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 54,
               "Title": "20240514143136_AddCraftsTable.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Migrations\\20240514143136_AddCraftsTable.cs",
               "RelativeDocumentMoniker": "Migrations\\20240514143136_AddCraftsTable.cs",
@@ -665,7 +651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 47,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
@@ -677,7 +663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Crafts\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Crafts\\Create.cshtml",
@@ -689,7 +675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 39,
               "Title": "dbo.AspNetUsers [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Part2/True/SqlTable/dbo.AspNetUsers.sql",
               "ToolTip": "dbo.AspNetUsers [Data]",
@@ -698,7 +684,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 38,
               "Title": "dbo.AspNetUserRoles [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Part2/True/SqlTable/dbo.AspNetUserRoles.sql",
               "ToolTip": "dbo.AspNetUserRoles [Data]",
@@ -707,7 +693,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "Part2Context.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Areas\\Identity\\Data\\Part2Context.cs",
               "RelativeDocumentMoniker": "Areas\\Identity\\Data\\Part2Context.cs",
@@ -719,7 +705,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 37,
               "Title": "dbo.AspNetRoles [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Part2/True/SqlTable/dbo.AspNetRoles.sql",
               "ToolTip": "dbo.AspNetRoles [Data]",
@@ -728,7 +714,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 45,
               "Title": "Login.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
@@ -740,7 +726,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 42,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
@@ -752,7 +738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 49,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
@@ -764,7 +750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 48,
               "Title": "20240503104901_Initial Create.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Migrations\\20240503104901_Initial Create.cs",
               "RelativeDocumentMoniker": "Migrations\\20240503104901_Initial Create.cs",
@@ -776,19 +762,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\Hamza\\source\\repos\\Part2\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAQAQAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-03T10:47:35.703Z"
+              "WhenOpened": "2024-05-03T10:47:35.703Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 40,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
@@ -800,7 +787,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
@@ -812,7 +799,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 44,
               "Title": "_AuthLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Areas\\Identity\\Pages\\_AuthLayout.cshtml",
               "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\_AuthLayout.cshtml",
@@ -824,7 +811,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Areas\\Identity\\Data\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "Areas\\Identity\\Data\\ApplicationUser.cs",
@@ -836,19 +823,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Hamza\\source\\repos\\Part2\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAMAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAiwCYAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T10:28:05.289Z"
+              "WhenOpened": "2024-05-03T10:28:05.289Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 51,
               "Title": "ScaffoldingReadMe.txt",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\ScaffoldingReadMe.txt",
               "RelativeDocumentMoniker": "ScaffoldingReadMe.txt",
@@ -860,7 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Part2.csproj",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Part2.csproj",
               "RelativeDocumentMoniker": "Part2.csproj",
@@ -868,12 +856,11 @@
               "RelativeToolTip": "Part2.csproj*",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-03T10:25:10.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T10:25:10.791Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 52,
               "Title": "_Layout.cshtml.css",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Shared\\_Layout.cshtml.css",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml.css",
@@ -885,7 +872,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -897,7 +884,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 46,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -909,7 +896,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 53,
               "Title": "ContactUs.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Home\\ContactUs.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\ContactUs.cshtml",
@@ -921,7 +908,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "AboutUs.cshtml",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Views\\Home\\AboutUs.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\AboutUs.cshtml",
@@ -957,7 +944,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 50,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
@@ -969,7 +956,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Hamza\\source\\repos\\Part2\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",

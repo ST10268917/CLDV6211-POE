@@ -36,7 +36,7 @@ namespace Part2
 
             builder.Services.AddSendGrid(options =>
             {
-                options.ApiKey = builder.Configuration.GetSection("SendGridSettings").GetValue<string>("ApiKey");
+                options.ApiKey = Environment.GetEnvironmentVariable("SENDGRID_API_KEY");
             });
 
             builder.Services.AddScoped<IEmailSender, EmailSenderService>();
